@@ -8,6 +8,6 @@ INSERT INTO productos (nombre, precio, create_at) VALUES ('Nike', 100, NOW());
 INSERT INTO productos (nombre, precio, create_at) VALUES ('Adidas', 200, NOW());
 INSERT INTO productos (nombre, precio, create_at) VALUES ('Reebok', 300, NOW());
 
-INSERT INTO usuarios (id, username, password, name, last_name, email, create_at) VALUES (1, 'gustavoG', '123456G', 'Gustavo', 'Huayta', 'gus@gmail.com', NOW() );
-INSERT INTO usuarios (id, username, password, name, last_name, email, create_at) VALUES (2, 'eduardo123', '123456E', 'Eduardo', 'Vicente', 'evi@gmail.com', NOW() );
+INSERT INTO usuarios (username, password, name, last_name, email, create_at) VALUES ('gustavoG', '123456G', 'Gustavo', 'Huayta', 'gus@gmail.com', NOW() );
+INSERT INTO usuarios (username, password, name, last_name, email, create_at) VALUES ('eduardo123', '123456E', 'Eduardo', 'Vicente', 'evi@gmail.com', NOW() );
 

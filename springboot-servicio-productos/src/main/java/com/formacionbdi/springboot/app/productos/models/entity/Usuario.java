@@ -1,6 +1,5 @@
 package com.formacionbdi.springboot.app.productos.models.entity;
 
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -11,25 +10,22 @@ public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long id;
-    public String username;
-    public String password;
-    public String name;
-
-    @Column(name = "last_name") //nombre de la columna -tabla
-    public String lastName; //campo en codigo
-
-    public String email;
-
+    private Long id;
+    private String username;
+    private String password;
+    private String name;
+    @Column(name = "last_name")
+    private String lastName;
+    private String email;
     @Column(name = "create_at")
     @Temporal(TemporalType.DATE)
-    public Date createAt;
+    private Date createAt;
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

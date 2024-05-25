@@ -1,10 +1,6 @@
 package com.formacionbdi.springboot.app.productos.models.service;
 
-
-
 import com.formacionbdi.springboot.app.productos.models.entity.Usuario;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 

@@ -11,20 +11,26 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class UsuarioServiceImpl implements  IUsuarioService{
+public class UsuarioServiceImpl implements IUsuarioService{
 
 
     @Autowired
     private UsuarioDAO usuarioDAO;
 
     @Override
-    public List<Usuario> findAll() {return (List<Usuario>) usuarioDAO.findAll();    }
+    public List<Usuario> findAll() {
+        return (List<Usuario>) usuarioDAO.findAll();
+    }
 
     @Override
-    public Usuario findById(Long id) { return usuarioDAO.findById(id).orElse(null);    }
+    public Usuario findById(Long id) {
+        return usuarioDAO.findById(id).orElse(null);
+    }
 
     @Override
-    public Usuario createUsuario(Usuario usuario) { return usuarioDAO.save(usuario);    }
+    public Usuario createUsuario(Usuario usuario) {
+        return usuarioDAO.save(usuario);
+    }
 
     @Override
     public Usuario modifiedUsuario(Usuario usuario) {
@@ -34,15 +40,15 @@ public class UsuarioServiceImpl implements  IUsuarioService{
         usuarioModificado.setUsername(usuario.getUsername());
         usuarioModificado.setPassword(usuario.getPassword());
         usuarioModificado.setName(usuario.getName());
-        usuarioModificado.setLastName(usuario.lastName);
+        usuarioModificado.setLastName(usuario.getLastName());
         usuarioModificado.setEmail(usuario.getEmail());
         usuarioModificado.setCreateAt(usuario.getCreateAt());
 
         return usuarioDAO.save(usuarioModificado);
-
-
     }
 
     @Override
-    public void deleteUsuario(Long id) { usuarioDAO.deleteById(id);}
+    public void deleteUsuario(Long id) {
+        usuarioDAO.deleteById(id);
+    }
 }

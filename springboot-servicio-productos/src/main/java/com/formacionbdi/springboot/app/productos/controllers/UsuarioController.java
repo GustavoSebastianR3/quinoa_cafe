@@ -1,8 +1,5 @@
 package com.formacionbdi.springboot.app.productos.controllers;
 
-
-
-import com.formacionbdi.springboot.app.productos.models.entity.Producto;
 import com.formacionbdi.springboot.app.productos.models.entity.Usuario;
 import com.formacionbdi.springboot.app.productos.models.service.UsuarioServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +31,5 @@ public class UsuarioController {
 
     @DeleteMapping("/eliminar/{id}")
     public void eliminar(@PathVariable Long id) {usuarioService.deleteUsuario(id);}
-
-
 
 }
