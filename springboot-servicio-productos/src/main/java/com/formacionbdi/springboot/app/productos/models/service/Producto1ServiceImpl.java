@@ -13,7 +13,6 @@ public class Producto1ServiceImpl implements IProducto1Service {
     @Autowired
     private Producto1DAO producto1DAO;
 
-
     @Override
     public List<Producto1> findByIdCategoria(Long idCategoria) {
         return (List<Producto1>) producto1DAO.findByIdCategoria(idCategoria);

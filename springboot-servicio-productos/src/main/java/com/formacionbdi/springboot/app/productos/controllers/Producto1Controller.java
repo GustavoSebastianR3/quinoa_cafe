@@ -1,4 +1,5 @@
 package com.formacionbdi.springboot.app.productos.controllers;
+
 import com.formacionbdi.springboot.app.productos.models.entity.Producto1;
 import com.formacionbdi.springboot.app.productos.models.service.IProducto1Service;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,6 @@ public class Producto1Controller {
     @GetMapping("/listar/{idCategoria}")
     public List<Producto1> listar(@PathVariable Long idCategoria){
         return producto1Service.findByIdCategoria(idCategoria);
-
-
     }
 
 }

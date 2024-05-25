@@ -6,7 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface Producto1DAO extends CrudRepository<Producto1, Long> {
-
     List<Producto1> findByIdCategoria(Long idCategoria);
-
 }
