@@ -13,6 +13,7 @@ public class Categoria implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCategoria;
     private String nombre;
+    private String icono;
 
     public Long getIdCategoria() {
         return idCategoria;
@@ -29,4 +30,13 @@ public class Categoria implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
+	public String getIcono() {
+		return icono;
+	}
+
+	public void setIcono(String icono) {
+		this.icono = icono;
+	}
+    
 }
