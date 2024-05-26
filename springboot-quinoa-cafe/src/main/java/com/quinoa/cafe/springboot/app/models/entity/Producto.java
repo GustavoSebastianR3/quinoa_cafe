@@ -1,10 +1,10 @@
 package com.quinoa.cafe.springboot.app.models.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "producto")
+@Table(name = "productos")
 public class Producto implements Serializable {
 
     @Id
