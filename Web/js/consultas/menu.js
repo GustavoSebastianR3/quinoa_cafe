@@ -60,7 +60,7 @@ function init(){
             categorias.productos.forEach(productos => {
                 print +=`<div class="col-lg-3 col-md-6">
                             <div class="portfolio-item">
-                                <a href="#" class="portfolio-image"><img src="demos/restaurant/images/menu/breakfast/2.jpg" alt="1" class="rounded"></a>
+                                <a href="#" class="portfolio-image"><img src="demos/restaurant/images/menu/${productos.image}" alt="1" class="rounded"></a>
                                 <div class="portfolio-desc pt-2">
                                     <h4 class="mb-1"><a href="#">${productos.nombre}</a></h4>
                                     <div class="item-price">&dollar; ${productos.precio}</div>
