@@ -3,6 +3,9 @@ package com.quinoa.cafe.springboot.app.models.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 
 @Entity
@@ -14,6 +17,10 @@ public class Categoria implements Serializable {
     private Long idCategoria;
     private String nombre;
     private String icono;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JsonManagedReference
+    @JoinColumn(name = "id_categoria")
+    private List<Producto> productos;
 
     public Long getIdCategoria() {
         return idCategoria;
@@ -38,5 +45,17 @@ public class Categoria implements Serializable {
 	public void setIcono(String icono) {
 		this.icono = icono;
 	}
-    
+
+	public Categoria(Long idCategoria, String nombre, String icono, List<Producto> productos) {
+		super();
+		this.idCategoria = idCategoria;
+		this.nombre = nombre;
+		this.icono = icono;
+		this.productos = productos;
+	}
+
+	public Categoria() {
+		super();
+	}
+	
 }
